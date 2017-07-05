@@ -18,11 +18,13 @@ for (var i = 0; i < patients.length; i++) {
 	if ( weight <= 0 || weight >= 1000 ) {
 		weightIsValid = false;
 		tdImc.textContent = "Weight invalid";
+		patient.classList.add('patient-invalid')
 	}
 
 	if ( height <= 0 || height >= 3.00 ) {
 		heightIsValid = false;
 		tdImc.textContent = "height invalid";
+		patient.classList.add('patient-invalid')
 	}
 
 	if ( weightIsValid && heightIsValid ) {
