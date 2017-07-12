@@ -33,3 +33,9 @@ for (var i = 0; i < patients.length; i++) {
 	}
 	
 }
+
+var buttonAdd = document.querySelector('.button-add');
+buttonAdd.addEventListener("click", function(event){
+	event.preventDefault();
+	console.log('oizinho')
+});

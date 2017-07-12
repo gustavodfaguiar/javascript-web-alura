@@ -62,8 +62,35 @@
 			</tr>
 		</tbody>
 	</table>
+	
+		<div class="mdl-grid">
+		   	<h2 class="mdl-cell mdl-cell--4-col">Add new patient</h2>
+			<ul id="error-messages"></ul>
+		    <form id="form-add">
+		         <div class="mdl-cell mdl-cell--11-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		            <label class="mdl-textfield__label">Name:</label>
+		            <input class="mdl-textfield__input" name="name" type="text" placeholder="Enter the name of your patient">
+		        </div>
+		        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		            <label class="mdl-textfield__label">Weight:</label>
+		            <input class="mdl-textfield__input" name="weight" type="text" placeholder="Enter the weight of your patient">
+		        </div>
+		        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		            <label class="mdl-textfield__label">Height:</label>
+		            <input class="mdl-textfield__input" name="height" type="text" placeholder="Enter the height of your patient">
+		        </div>
+		        <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		            <label class="mdl-textfield__label">% of Fat:</label>
+		            <input class="mdl-textfield__input" type="text" placeholder="Enter the percentage of fat for your patient">
+		        </div>
+				
+				<div class="mdl-cell mdl-cell--12-col">
+		        	<button class="mdl-button mdl-js-button mdl-button--raised button-add">Add</button>
+		        </div>
+		    </form>
+		</div>
 	</div>
-
+	
 	<script src="./js/main.js"></script>
 </body>
 </html>
