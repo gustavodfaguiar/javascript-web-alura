@@ -7,9 +7,11 @@ buttonAdd.addEventListener("click", function(event){
 	var patient = getPatientForm(form);
 
 	var patientTr = buildTr(patient);
+
+	var errors = validatePatient(patient);
 	
-	if ( ! validatePatient(patient) ) {
-		console.log("Paciente inválido");
+	if ( errors.length > 0 ) {
+		showMessagesErros(errors);
 		return;
 	}
 
@@ -18,8 +20,22 @@ buttonAdd.addEventListener("click", function(event){
 	table.appendChild(patientTr);
 
 	form.reset();
+	var messagesError = document.querySelector(".error-messages");
+	messagesError.innerHTML = "";
 
 });
+
+function showMessagesErros(errors) {
+	var ul = document.querySelector('.error-messages');
+	ul.innerHTML = "";
+	errors.forEach(function(error){
+		var li = document.createElement("li");
+		li.classList.add("mdl-list__item");
+		li.classList.add('patient-invalid')
+		li.textContent = error;
+		ul.appendChild(li);
+	});
+}
 
 
 function getPatientForm(form) {
@@ -57,7 +73,32 @@ function buildTd(data, class_css) {
 }
 
 function validatePatient(patient) {
-	if ( validateWeight(patient.weight) ) {
-		return true;
+
+	var errors = [];
+
+	if ( patient.name.length == 0 ) {
+		errors.push("Name can not be blank");
 	}
+
+	if ( ! validateWeight(patient.weight) ) {
+		errors.push("Weight is invalid");
+	}
+
+	if ( ! validateHeight(patient.height) ) {
+		errors.push("Height is invalid");
+	}
+
+	if ( patient.fat.length == 0 ) {
+		errors.push("Fat can not be blank");
+	}
+
+	if ( patient.weight.length == 0 ) {
+		errors.push("Weight can not be blank");
+	}
+
+	if ( patient.height.length == 0 ) {
+		errors.push("Height can not be blank");
+	}
+
+	return errors;
 }
