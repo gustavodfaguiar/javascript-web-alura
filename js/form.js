@@ -8,6 +8,11 @@ buttonAdd.addEventListener("click", function(event){
 
 	var patientTr = buildTr(patient);
 	
+	if ( ! validatePatient(patient) ) {
+		console.log("Paciente inválido");
+		return;
+	}
+
 	var table = document.querySelector(".tbody");
 
 	table.appendChild(patientTr);
@@ -49,4 +54,10 @@ function buildTd(data, class_css) {
 	td.textContent = data;
 	td.classList.add(class_css);
 	return td;
+}
+
+function validatePatient(patient) {
+	if ( validateWeight(patient.weight) ) {
+		return true;
+	}
 }
