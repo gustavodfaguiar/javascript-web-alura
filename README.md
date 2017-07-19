@@ -5,7 +5,7 @@
 - [x] Arrays, Loop e Estilos
 - [x] Eventos, Formulários e Criando Elementos
 - [x] Boas Práticas com Javascript
-- [ ] Validação de Formulários
+- [x] Validação de Formulários
 - [ ] Remoção, Delegação e Animação
 - [ ] Filtrando uma tabela
 - [ ] Buscando pacientes com AJAX
