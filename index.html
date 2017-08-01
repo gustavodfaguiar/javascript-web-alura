@@ -10,6 +10,12 @@
 </head>
 <body>
 	<div class="mdl-grid">
+		<div class="mdl-textfield mdl-js-textfield">
+			<input class="mdl-textfield__input" type="text" id="filter">
+		    <label class="mdl-textfield__label" for="filter">Filter:</label>
+		</div>
+	</div>
+	<div class="mdl-grid">
 	<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
 		<thead>
 			<tr>
@@ -22,7 +28,7 @@
 		</thead>
 		<tbody class="tbody">
 			<tr class="patient">
-				<td>Paulo</td>
+				<td class="info-name">Paulo</td>
 				<td class="info-weight">100</td>
 				<td class="info-height">2.00</td>
 				<td class="info-body-fat">10</td>
@@ -30,7 +36,7 @@
 			</tr>
 
 			<tr class="patient">
-				<td>João</td>
+				<td class="info-name">João</td>
 				<td class="info-weight">80</td>
 				<td class="info-height">1.72</td>
 				<td class="info-body-fat">40</td>
@@ -38,7 +44,7 @@
 			</tr>
 
 			<tr class="patient">
-				<td>Erica</td>
+				<td class="info-name">Erica</td>
 				<td class="info-weight">54</td>
 				<td class="info-height">1.64</td>
 				<td class="info-body-fat">14</td>
@@ -46,7 +52,7 @@
 			</tr>
 
 			<tr class="patient">
-				<td>Douglas</td>
+				<td class="info-name">Douglas</td>
 				<td class="info-weight">85</td>
 				<td class="info-height">1.73</td>
 				<td class="info-body-fat">24</td>
@@ -54,7 +60,7 @@
 			</tr>
 
 			<tr class="patient">
-				<td>Tatiana</td>
+				<td class="info-name">Tatiana</td>
 				<td class="info-weight">4000</td>
 				<td class="info-height">1.55</td>
 				<td class="info-body-fat">19</td>
@@ -96,5 +102,6 @@
 	<script src="./js/calculate-imc.js"></script>
 	<script src="./js/form.js"></script>
 	<script src="./js/remove-patient.js"></script>
+	<script src="./js/filter.js"></script>
 </body>
 </html>

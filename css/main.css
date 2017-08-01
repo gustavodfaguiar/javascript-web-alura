@@ -6,3 +6,7 @@
 	opacity: 0;
 	transition: 0.5s;
 }
+
+.invisible {
+	display: none;
+}

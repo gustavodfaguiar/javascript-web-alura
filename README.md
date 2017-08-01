@@ -7,5 +7,5 @@
 - [x] Boas Práticas com Javascript
 - [x] Validação de Formulários
 - [x] Remoção, Delegação e Animação
-- [ ] Filtrando uma tabela
+- [x] Filtrando uma tabela
 - [ ] Buscando pacientes com AJAX
