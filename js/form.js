@@ -6,8 +6,6 @@ buttonAdd.addEventListener("click", function(event){
 
 	var patient = getPatientForm(form);
 
-	var patientTr = buildTr(patient);
-
 	var errors = validatePatient(patient);
 	
 	if ( errors.length > 0 ) {
@@ -15,9 +13,7 @@ buttonAdd.addEventListener("click", function(event){
 		return;
 	}
 
-	var table = document.querySelector(".tbody");
-
-	table.appendChild(patientTr);
+	addPatientTable(patient);
 
 	form.reset();
 	var messagesError = document.querySelector(".error-messages");
@@ -101,4 +97,10 @@ function validatePatient(patient) {
 	}
 
 	return errors;
+}
+
+function addPatientTable(patient) {
+	var patientTr = buildTr(patient);
+	var table = document.querySelector(".tbody");
+	table.appendChild(patientTr);
 }
